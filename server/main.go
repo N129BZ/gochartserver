@@ -20,8 +20,6 @@ import (
 	"database/sql"
 
 	_ "github.com/mattn/go-sqlite3"
-
-	"golang.org/x/net/websocket"
 )
 
 type SettingMessage struct {
@@ -151,7 +149,7 @@ func NewMbTileConnectionCacheEntry(path string, conn *sql.DB) *MbTileConnectionC
 var mbtileCacheLock = sync.Mutex{}
 var mbtileConnectionCache = make(map[string]MbTileConnectionCacheEntry)
 
-func handleJsonIo(conn *websocket.Conn) {
+/* func handleJsonIo(conn *websocket.Conn) {
 	// Connection closes when function returns. Since uibroadcast is writing and we don't need to read anything (for now), just keep it busy.
 	for {
 		buf := make([]byte, 1024)
@@ -164,7 +162,7 @@ func handleJsonIo(conn *websocket.Conn) {
 		}
 		time.Sleep(1 * time.Second)
 	}
-}
+} */
 
 func setNoCache(w http.ResponseWriter) {
 	w.Header().Set("Cache-Control", "no-cache, no-store, must-revalidate")
@@ -752,12 +750,12 @@ func main() {
 	http.Handle("/tilesets/styles/", http.StripPrefix("/tilesets/styles/", http.FileServer(http.Dir(MAIN_HOME+"/mapdata/styles"))))
 	http.HandleFunc("/logs/", viewLogs)
 
-	http.HandleFunc("/jsonio",
+	/* http.HandleFunc("/jsonio",
 		func(w http.ResponseWriter, req *http.Request) {
 			s := websocket.Server{
 				Handler: websocket.Handler(handleJsonIo)}
 			s.ServeHTTP(w, req)
-		})
+		}) */
 
 	// routes for retrieving tiles, airport data, map state, and position history
 	http.HandleFunc("/metars", handleMetarsRequest)
