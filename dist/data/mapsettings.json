@@ -1,0 +1,14 @@
+{
+  "startupzoom": 9,
+  "uselocaltime": true,
+  "savepositionhistory": false,
+  "histintervalmsec": 10000,
+  "stratuxmaxmetarcount": 10000,
+  "showattribution": true,
+  "lockownshiptocenter": true,
+  "smallScreenHitTolerance": 40,
+  "swipeThreshold": 100,
+  "getHeliports": false,
+  "getClosedAirports": false,
+  "usemetricunits": false
+}
