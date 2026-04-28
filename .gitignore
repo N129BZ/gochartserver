@@ -13,3 +13,4 @@
 **/.DS_Store
 **/internal/handlers
 **/server/__debug_*
+**/data/airports.db
