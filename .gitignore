@@ -1,0 +1,15 @@
+**/node_modules
+**/out
+**/xmldata/*.xml
+**/*.db
+**/*.mbtiles
+**/dist
+**/build
+**/coverage
+**/logs
+**/tmp
+**/cache
+**/.env
+**/.DS_Store
+**/internal/handlers
+**/server/__debug_*

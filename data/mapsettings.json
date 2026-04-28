@@ -1,0 +1,10 @@
+{
+  "startupzoom": 9,
+  "uselocaltime": true,
+  "showattribution": true,
+  "smallScreenHitTolerance": 40,
+  "swipeThreshold": 100,
+  "getHeliports": false,
+  "getClosedAirports": false,
+  "usemetricunits": false
+}
